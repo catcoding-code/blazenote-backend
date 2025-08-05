@@ -10,9 +10,12 @@ const app = new Hono();
 
 // Define allowed origins
 // Important! No trailing slash
+
+
+// Update the allowedOrigins set to include your frontend domain
 const allowedOrigins = new Set([
-  "http://localhost:5173",
-  "https://<your-frontend-domain>.<tld>",
+  "http://localhost:5173",                           // Local development
+  "https://blazenote-frontend.graphic-encoder.pages.dev",  // Your deployed frontend
 ]);
 
 // https://hono.dev/docs/middleware/builtin/cors
